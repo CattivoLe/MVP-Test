@@ -8,15 +8,26 @@
 
 import UIKit
 
+//MARK: - Protocol
+protocol MainViewPresenterProtocol: class {
+    init(view: MainViewProtocol, networkService: NetworkServiceProtocol, router: RouterProtocol)
+    var comments: [Comment]? { get set }
+    func getComments()
+    func tapOnTheComment(comment: Comment?)
+}
+
+//MARK: - Class
 class MainModulPresenter: MainViewPresenterProtocol {
     
     weak var view: MainViewProtocol?
     let networkService: NetworkServiceProtocol
+    var router: RouterProtocol?
     var comments: [Comment]?
     
-    required init(view: MainViewProtocol, networkService: NetworkServiceProtocol) {
+    required init(view: MainViewProtocol, networkService: NetworkServiceProtocol, router: RouterProtocol) {
         self.view = view
         self.networkService = networkService
+        self.router = router
         getComments()
     }
     
@@ -33,5 +44,9 @@ class MainModulPresenter: MainViewPresenterProtocol {
                 }
             }
         }
+    }
+    
+    func tapOnTheComment(comment: Comment?) {
+        router?.showDetail(comment: comment)
     }
 }

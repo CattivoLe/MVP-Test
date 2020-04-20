@@ -20,17 +20,28 @@
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7cv-aa-xP1">
                     <rect key="frame" x="20" y="64" width="374" height="778"/>
+                    <gestureRecognizers/>
                     <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JGj-Eg-7Zw">
+                    <rect key="frame" x="186.5" y="810" width="41" height="32"/>
+                    <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
+                    <state key="normal" title="Close"/>
+                    <connections>
+                        <action selector="tappedLabel:" destination="-1" eventType="touchUpInside" id="awo-R0-1Je"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="7cv-aa-xP1" secondAttribute="trailing" constant="20" id="DRW-db-m8L"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="JGj-Eg-7Zw" secondAttribute="bottom" constant="20" id="EdP-9h-9zR"/>
                 <constraint firstItem="7cv-aa-xP1" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="N2R-6N-7jT"/>
                 <constraint firstItem="7cv-aa-xP1" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="Ri6-V8-siy"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="7cv-aa-xP1" secondAttribute="bottom" constant="20" id="xop-LW-80Z"/>
+                <constraint firstItem="JGj-Eg-7Zw" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="y1N-j0-dQ6"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="139" y="137"/>

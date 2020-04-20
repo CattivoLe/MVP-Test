@@ -17,9 +17,9 @@
 		EE01F4E8244DA39A008CCCF2 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE01F4E7244DA39A008CCCF2 /* Comment.swift */; };
 		EE01F4EA244DA410008CCCF2 /* MainModulPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE01F4E9244DA410008CCCF2 /* MainModulPresenter.swift */; };
 		EE01F4ED244DAB5E008CCCF2 /* MainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE01F4EC244DAB5E008CCCF2 /* MainView.xib */; };
-		EE01F4EF244DAB78008CCCF2 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE01F4EE244DAB78008CCCF2 /* Protocols.swift */; };
 		EE01F4F1244DAD30008CCCF2 /* ModulBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE01F4F0244DAD30008CCCF2 /* ModulBuilder.swift */; };
 		EE01F4F3244DB275008CCCF2 /* MainPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE01F4F2244DB275008CCCF2 /* MainPresenterTest.swift */; };
+		EE03C1A4244DDBA800271349 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE03C1A3244DDBA800271349 /* Router.swift */; };
 		EE3E0CE7244DC044000CDDA4 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE3E0CE6244DC044000CDDA4 /* NetworkService.swift */; };
 		EE9C1AF1244DD0AE0090DBDD /* DetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9C1AF0244DD0AE0090DBDD /* DetailPresenter.swift */; };
 		EE9C1AF9244DD4060090DBDD /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9C1AF7244DD4060090DBDD /* DetailViewController.swift */; };
@@ -51,9 +51,9 @@
 		EE01F4E7244DA39A008CCCF2 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		EE01F4E9244DA410008CCCF2 /* MainModulPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainModulPresenter.swift; sourceTree = "<group>"; };
 		EE01F4EC244DAB5E008CCCF2 /* MainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainView.xib; sourceTree = "<group>"; };
-		EE01F4EE244DAB78008CCCF2 /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		EE01F4F0244DAD30008CCCF2 /* ModulBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModulBuilder.swift; sourceTree = "<group>"; };
 		EE01F4F2244DB275008CCCF2 /* MainPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenterTest.swift; sourceTree = "<group>"; };
+		EE03C1A3244DDBA800271349 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		EE3E0CE6244DC044000CDDA4 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		EE9C1AF0244DD0AE0090DBDD /* DetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenter.swift; sourceTree = "<group>"; };
 		EE9C1AF7244DD4060090DBDD /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
@@ -101,8 +101,8 @@
 			children = (
 				EE01F4C2244DA2BA008CCCF2 /* AppDelegate.swift */,
 				EE01F4C4244DA2BA008CCCF2 /* SceneDelegate.swift */,
-				EE01F4EE244DAB78008CCCF2 /* Protocols.swift */,
 				EE01F4F0244DAD30008CCCF2 /* ModulBuilder.swift */,
+				EE03C1A3244DDBA800271349 /* Router.swift */,
 				EE01F4EB244DAAD7008CCCF2 /* Main Modul */,
 				EE9C1AEF244DD0870090DBDD /* Detail Modul */,
 				EE01F4CB244DA2BD008CCCF2 /* Assets.xcassets */,
@@ -304,12 +304,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE03C1A4244DDBA800271349 /* Router.swift in Sources */,
 				EE01F4C7244DA2BA008CCCF2 /* MainViewController.swift in Sources */,
 				EE01F4C3244DA2BA008CCCF2 /* AppDelegate.swift in Sources */,
 				EE9C1AF1244DD0AE0090DBDD /* DetailPresenter.swift in Sources */,
 				EE3E0CE7244DC044000CDDA4 /* NetworkService.swift in Sources */,
 				EE01F4E8244DA39A008CCCF2 /* Comment.swift in Sources */,
-				EE01F4EF244DAB78008CCCF2 /* Protocols.swift in Sources */,
 				EE01F4C5244DA2BA008CCCF2 /* SceneDelegate.swift in Sources */,
 				EE9C1AF9244DD4060090DBDD /* DetailViewController.swift in Sources */,
 				EE01F4EA244DA410008CCCF2 /* MainModulPresenter.swift in Sources */,

@@ -8,6 +8,13 @@
 
 import UIKit
 
+//MARK: - Protocol
+protocol MainViewProtocol: class {
+    func succes()
+    func failure(error: Error)
+}
+
+//MARK: - Class
 class MainViewController: UIViewController {
     
     let cellIdentifire = "Cell"
@@ -21,10 +28,9 @@ class MainViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
     }
-
-
 }
 
+//MARK: - Extension
 extension MainViewController: MainViewProtocol {
     func succes() {
         tableView.reloadData()
@@ -35,6 +41,7 @@ extension MainViewController: MainViewProtocol {
     }
 }
 
+//MARK: - TableView DataSource
 extension MainViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return presenter.comments?.count ?? 0
@@ -48,10 +55,10 @@ extension MainViewController: UITableViewDataSource {
     }
 }
 
+//MARK: - TableView Delegate
 extension MainViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let comment = presenter.comments?[indexPath.row]
-        let detailViewController = ModelBuilder.createDetailModul(comment: comment)
-        navigationController?.pushViewController(detailViewController, animated: true)
+        presenter.tapOnTheComment(comment: comment)
     }
 }

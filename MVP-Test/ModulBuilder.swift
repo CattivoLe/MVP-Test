@@ -8,26 +8,30 @@
 
 import UIKit
 
-class ModelBuilder: Builder {
+//MARK: - Protocol
+protocol BuilderProtocol {
+    func createMainModul(router: RouterProtocol) -> UIViewController
+    func createDetailModul(comment: Comment?, router: RouterProtocol) -> UIViewController
+}
+
+//MARK: - Class
+class ModelBuilder: BuilderProtocol {
     
-    //MARK: - Main modul
-    
-    static func createMainModul() -> UIViewController {
-        
-        let viewController = MainViewController()
+    // Main modul
+    func createMainModul(router: RouterProtocol) -> UIViewController {
+        let mainView = MainViewController()
         let networkService = NetworkService()
-        let presenter = MainModulPresenter(view: viewController, networkService: networkService)
+        let presenter = MainModulPresenter(view: mainView, networkService: networkService, router: router)
         
-        viewController.presenter = presenter
-        return viewController
+        mainView.presenter = presenter
+        return mainView
     }
     
-    //MARK: - Detail modul
-    
-    static func createDetailModul(comment: Comment?) -> UIViewController {
+    // Detail modul
+    func createDetailModul(comment: Comment?, router: RouterProtocol) -> UIViewController {
         let detailView = DetailViewController()
         let networkService = NetworkService()
-        let presenter = DetailPresenter(view: detailView, networkService: networkService, comment: comment)
+        let presenter = DetailPresenter(view: detailView, networkService: networkService, router: router, comment: comment)
         
         detailView.presenter = presenter
         return detailView

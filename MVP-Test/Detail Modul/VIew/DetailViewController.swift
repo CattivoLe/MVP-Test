@@ -8,6 +8,12 @@
 
 import UIKit
 
+//MARK: - Protocol
+protocol DetailViewProtocol: class {
+    func setComment(comment: Comment?)
+}
+
+//MARK: - Class
 class DetailViewController: UIViewController {
     
     var presenter: DetailViewPresenterProtocol!
@@ -19,9 +25,13 @@ class DetailViewController: UIViewController {
         presenter.setComment()
     }
 
-
+    @IBAction func tappedLabel(_ sender: Any) {
+        presenter.tapped()
+    }
+    
 }
 
+//MARK: - Extension
 extension DetailViewController: DetailViewProtocol {
     func setComment(comment: Comment?) {
         self.textLabel.text = comment?.body
